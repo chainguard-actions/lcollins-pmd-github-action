@@ -1,0 +1,33 @@
+name: 'Publish PMD Code Report'
+description: 'Push PMD Code Analysis report (adapted from jwgmeligmeyling/pmd-github-action)'
+author: 'Luke Collins'
+inputs:
+  path:
+    description: 'A file, directory or wildcard pattern that describes where to find the reports'
+    required: true
+  name:
+    description: 'Check run name under which the report is created'
+    default: PMD
+  title:
+    description: 'Check run title under which the report is created'
+    default: PMD Source Code Analyzer report
+  token:
+    description: >
+      Personal access token (PAT) used to fetch the repository. The PAT is configured
+      with the local git config, which enables your scripts to run authenticated git
+      commands. The post-job step removes the PAT.
+      We recommend using a service account with the least permissions necessary.
+      Also when generating a new PAT, select the least scopes necessary.
+      [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+    default: ${{ github.token }}
+  fail-on-violation:
+    description: 'Enables status markers to be added to check'
+    default: false
+    required: false
+runs:
+  pre: chainguard-phonehome.js
+  using: 'node24'
+  main: 'dist/index.js'
+branding:
+  icon: umbrella
+  color: purple
