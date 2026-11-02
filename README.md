@@ -6,9 +6,9 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 ## Versions
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v4.0.0 | [`v4.0.0`](https://github.com/chainguard-actions/lcollins-pmd-github-action/tree/v4.0.0) | [`6fd3b42`](https://github.com/lcollins/pmd-github-action/commit/6fd3b424c6ffd1f2675724dc36b8f8d557b112ce) |
+| Version | Tag | Upstream commit | Hardening report |
+|---------|-----|-----------------|------------------|
+| v4.0.0 | [`v4.0.0`](https://github.com/chainguard-actions/lcollins-pmd-github-action/tree/v4.0.0) | [`6fd3b42`](https://github.com/lcollins/pmd-github-action/commit/6fd3b424c6ffd1f2675724dc36b8f8d557b112ce) | [`HARDENING.md`](https://github.com/chainguard-actions/lcollins-pmd-github-action/blob/v4.0.0/HARDENING.md) |
 
 ## Privacy
 
